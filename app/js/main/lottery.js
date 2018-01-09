@@ -1,10 +1,9 @@
-import 'babel-polyfill';
-import Base from '../lottery/base.js';
-import Timer from '../lottery/timer.js';
-import Calulate from '../lottery/calulate.js';
-import Interface from '../lottery/interface.js';
-import $ from 'jquery';
-
+require('babel-polyfill');
+var Base = require('../lottery/base.js');
+var Timer = require('../lottery/timer.js');
+var Calulate = require('../lottery/calulate.js');
+var Interface = require('../lottery/interface.js');
+var $ = require('jquery');
 const copyProperties = function (target, source) {
   for (let key of Reflect.ownKeys(source)) {
     if (key !== 'constructor' && key !== 'prototype' && key !== 'name') {
@@ -78,4 +77,4 @@ class Lottery extends mix (Base, Calulate, Interface, Timer) {
     $('.qkmethod').on('click', '.btn-middle', self.getRandomCode.bind(self));
   }
 }
-export default Lottery;
+module.exports = Lottery;

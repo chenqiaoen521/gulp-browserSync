@@ -1,5 +1,5 @@
-import $ from 'jquery'
-export default class Base {
+var $ = require('jquery');
+module.exports = class Base {
   //初始化奖金和玩法及说明
   initPlayList() {
     this.play_list.set('r2', {

@@ -1,4 +1,4 @@
-export default class Calulate {
+module.exports = class Calulate {
   //计算注数
   computeCount (active, play_name) {
     let count = 0;

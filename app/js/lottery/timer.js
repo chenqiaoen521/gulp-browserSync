@@ -1,4 +1,4 @@
-export default class Timer {
+module.exports = class Timer {
   countdown (end, update, handle) {
     const now = new Date().getTime();
     const self = this;

@@ -1,5 +1,4 @@
-import $ from 'jquery';
-
+var $ = require('jquery');
 class Interface{
   /**获取彩票期号*/
   getOmit (issue) {
@@ -60,4 +59,4 @@ class Interface{
     });
   }
 }
-export default Interface
+module.exports = Interface

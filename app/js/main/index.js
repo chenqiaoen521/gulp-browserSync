@@ -1,2 +1,2 @@
-import Lottery from './lottery.js';
+const  Lottery = require('./lottery.js');
 const syy = new Lottery();
