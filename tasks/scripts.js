@@ -33,7 +33,7 @@ gulp.task('scripts', () => {
   })
   .pipe(gulp.dest('app/dist/js'))
   .pipe(rename({
-    basename: 'cp',
+    basename: 'vendor',
     extname: '.min.js'
   }))
   .pipe(gulpif(args.production,uglify({compress: {properties: false},output:{'quote_keys': true}})))
