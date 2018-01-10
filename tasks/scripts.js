@@ -21,12 +21,13 @@ gulp.task('scripts', () => {
   .pipe(named())
   .pipe(browserify({
     insertGlobals : true,
-    debug : !gulp.env.production
+    debug : !args.production,
+    external: 'jquery'
   }))
   .pipe(rename({
     basename: 'main'
   }))
-  .pipe(babel({presets:['es2015']}))
+  //.pipe(babel({presets:['es2015']}))
   .pipe(gulpif(args.production,uglify({compress: {properties: false},output:{'quote_keys': true}})))
   .pipe(gulp.dest('app/dist/js/'))
   .pipe(gulpif(args.watch,browserSync.stream()));
